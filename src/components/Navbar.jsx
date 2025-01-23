@@ -67,7 +67,7 @@ const Navbar = () => {
 
       {/* Sliding Menu (Mobile) */}
       <div
-        className={`fixed top-0 right-0 w-[300px] h-full bg-white bg-opacity-95 transition-transform duration-300 transform ${
+        className={`fixed top-0 right-0 w-[300px] h-full bg-white  z-1  transition-transform duration-300 transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -82,28 +82,28 @@ const Navbar = () => {
           <nav className="flex flex-col gap-6 mt-10 text-lg font-medium text-black">
             <a
               href="#home"
-              className="hover:text-gray-400"
+              className="hover:text-gray-400 border border-black  rounded-md p-3 "
               onClick={toggleMenu}
             >
               Home
             </a>
             <a
               href="#shop"
-              className="hover:text-gray-400"
+              className="hover:text-gray-400 border border-black  rounded-md p-3 "
               onClick={toggleMenu}
             >
               Shop
             </a>
             <a
               href="#about"
-              className="hover:text-gray-400"
+               className="hover:text-gray-400 border border-black  rounded-md p-3 "
               onClick={toggleMenu}
             >
               About
             </a>
             <a
               href="#contact"
-              className="hover:text-gray-400"
+               className="hover:text-gray-400 border border-black  rounded-md p-3 "
               onClick={toggleMenu}
             >
               Contact
@@ -111,19 +111,27 @@ const Navbar = () => {
           </nav>
           {/* Icons (Column Layout) */}
           <div className="flex flex-col gap-6 mt-6 text-black">
-            <FaUserPen
+           <div className=" border border-black rounded-md  py-3 px-8">
+           <FaUserPen
               size={24}
               className="cursor-pointer hover:text-gray-400"
             />
+           </div>
+           <div className=" border border-black rounded-md  py-3 px-8">
             <CiSearch size={24} className="cursor-pointer hover:text-gray-400" />
+            </div>
+            <div className=" border border-black rounded-md  py-3 px-8">
             <IoMdHeartEmpty
               size={24}
               className="cursor-pointer hover:text-gray-400"
             />
+            </div>
+            <div className=" border border-black rounded-md  py-3 px-8">
             <MdOutlineShoppingCart
               size={24}
               className="cursor-pointer hover:text-gray-400"
             />
+            </div>
           </div>
         </div>
       </div>
