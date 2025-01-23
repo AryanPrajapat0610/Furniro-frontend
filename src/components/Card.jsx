@@ -43,7 +43,7 @@ const Card = () => {
   const addproduct = async (data) => {
     console.log("data came", data);
     try {
-      const response = await fetch("https://vercel.com/aryan-prajapats-projects/furniro-backend/api/cards/createCard", {
+      const response = await fetch("https://furniro-backend-pi.vercel.app/api/cards/createCard", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
